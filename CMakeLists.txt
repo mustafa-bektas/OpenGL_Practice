@@ -14,7 +14,10 @@ add_library(glad external/glad/src/glad.c)
 target_include_directories(glad PUBLIC external/glad/include)
 
 # Create executable
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/stb_image.cpp
+)
 
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE 
